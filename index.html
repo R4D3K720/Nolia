@@ -25,7 +25,10 @@
     </nav>
 
     <div class="nav-actions">
-      <button class="icon-btn" aria-label="Koszyk">🛍</button>
+     <button class="icon-btn cart-trigger" id="cartBtn" aria-label="Otwórz koszyk">
+  🛍
+  <span class="cart-badge" id="cartBadge">1</span>
+</button>
       <a class="btn btn-small" href="#kup">Kup teraz</a>
       <button class="menu-btn" id="menuBtn" aria-label="Otwórz menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -271,7 +274,106 @@
     <div><a href="#">Regulamin</a><a href="#">Polityka prywatności</a></div>
   </div>
 </footer>
+<!-- TŁO KOSZYKA -->
+<div class="cart-overlay" id="cartOverlay"></div>
 
+<!-- KOSZYK -->
+<aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+
+  <div class="cart-header">
+    <div>
+      <span class="cart-eyebrow">TWOJE ZAMÓWIENIE</span>
+      <h2>Koszyk</h2>
+    </div>
+
+    <button class="cart-close" id="cartClose" aria-label="Zamknij koszyk">
+      ×
+    </button>
+  </div>
+
+  <div class="cart-body">
+
+    <div class="cart-product">
+
+      <div class="cart-product-img">
+        <img src="img/product.png" alt="Szczoteczka soniczna Nolia">
+      </div>
+
+      <div class="cart-product-info">
+
+        <div class="cart-product-top">
+          <div>
+            <h3>Nolia</h3>
+            <p>Szczoteczka soniczna</p>
+          </div>
+
+          <strong id="productTotal">179,99 zł</strong>
+        </div>
+
+        <span class="cart-variant">Biała</span>
+
+        <div class="cart-product-bottom">
+
+          <div class="quantity">
+            <button id="minusBtn" aria-label="Zmniejsz ilość">−</button>
+            <span id="quantity">1</span>
+            <button id="plusBtn" aria-label="Zwiększ ilość">+</button>
+          </div>
+
+          <button class="remove-product" id="removeProduct">
+            Usuń
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="cart-benefits">
+
+      <div>
+        <span>✓</span>
+        <p>
+          <b>30 dni na zwrot</b>
+          <small>Spokojnie przetestuj Nolia</small>
+        </p>
+      </div>
+
+      <div>
+        <span>✓</span>
+        <p>
+          <b>Bezpieczna płatność</b>
+          <small>BLIK, karta i szybkie płatności</small>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="cart-footer">
+
+    <div class="cart-summary">
+      <span>Razem</span>
+      <strong id="cartTotal">179,99 zł</strong>
+    </div>
+
+    <p class="cart-shipping">
+      Dostawa zostanie wybrana w następnym kroku
+    </p>
+
+    <button class="cart-checkout" id="checkoutBtn">
+      Przejdź do zakupu
+      <span>→</span>
+    </button>
+
+    <div class="cart-payment">
+      🔒 Bezpieczne i szyfrowane płatności
+    </div>
+
+  </div>
+
+</aside>
 <script src="script.js"></script>
 </body>
 </html>
