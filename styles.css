@@ -413,7 +413,6 @@ h2{
   .site-header{position:sticky}
   .nav{height:66px}
   .logo{font-size:26px}
-  .nav-actions .icon-btn:first-child{display:none}
   .nav-actions .icon-btn{width:30px;height:30px}
   .nav-actions .btn{display:none}
 
