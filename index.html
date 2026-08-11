@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Soniqa — szczoteczka soniczna</title>
+  <meta name="description" content="Soniqa — szczoteczka soniczna">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="logo" href="#top">Nolia.</a>
+
+    <nav class="desktop-nav" aria-label="Główna nawigacja">
+      <a href="#produkt">Produkty</a>
+      <a href="#zestaw">Końcówki</a>
+      <a href="#opinie">Opinie</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" aria-label="Konto">♡</button>
+      <button class="icon-btn" aria-label="Koszyk">🛍</button>
+      <a class="btn btn-small" href="#kup">Kup teraz</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Otwórz menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#produkt">Produkty</a>
+    <a href="#zestaw">Końcówki</a>
+    <a href="#opinie">Opinie</a>
+    <a href="#faq">FAQ</a>
+    <a href="#kontakt">Kontakt</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy hero-intro">
+        <h1>Zadbaj<br>o uśmiech,<br>pokochaj<br>codzienność.</h1>
+        <p>Soniqa to Twój codzienny rytuał, który robi wielką różnicę.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#kup">Kup teraz – 179,99 zł</a>
+          <a class="text-link" href="#produkt">Dowiedz się więcej <span>→</span></a>
+        </div>
+      </div>
+
+      <div class="hero-media media-frame hero-product">
+        <!-- PODMIEŃ src NA SWOJE ZDJĘCIE HERO -->
+        <img src="img/hero.png" alt="Szczoteczka Soniqa — hero" onerror="this.classList.add('is-missing')">
+        <div class="placeholder">HERO IMAGE<br><small>np. 1600×1200 px</small></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="feature-strip reveal">
+        <div class="feature"><span class="ico"><img src="img/ikonka1.png" alt=""></span><div><b>40 000 ruchów</b><small>na minutę</small></div></div>
+        <div class="feature"><span class="ico"><img src="img/ikonka2.png" alt=""></span><div><b>Do 30 dni</b><small>na jednym ładowaniu</small></div></div>
+        <div class="feature"><span class="ico"><img src="img/ikonka3.png" alt=""></span><div><b>5 trybów</b><small>czyszczenia</small></div></div>
+        <div class="feature"><span class="ico"><img src="img/ikonka4.png" alt=""></span><div><b>Wodoodporność</b><small>IPX7</small></div></div>
+        <div class="feature"><span class="ico"><img src="img/ikonka5.png" alt=""></span><div><b>Ładowanie</b><small>przez USB‑C</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUKT -->
+  <section class="section" id="produkt">
+    <div class="container product-grid reveal">
+      <div class="product-copy">
+        <span class="eyebrow">PRZEMYŚLANA TECHNOLOGIA</span>
+        <h2>Skuteczność, którą<br>widać i czuć.</h2>
+        <p>Usuwa do 10× więcej płytki nazębnej niż tradycyjna szczoteczka manualna, dbając o zdrowie zębów i dziąseł każdego dnia.</p>
+
+        <ul class="ticks">
+          <li>Delikatna dla dziąseł</li>
+          <li>Inteligentny timer 2 minuty</li>
+          <li>Bezpieczna i skuteczna</li>
+        </ul>
+      </div>
+
+      <div class="product-media media-frame">
+        <!-- PODMIEŃ src NA ZDJĘCIE PRODUKTU -->
+        <img src="img/hero2.png" alt="Szczoteczka Soniqa" onerror="this.classList.add('is-missing')">
+        <div class="placeholder">PRODUCT IMAGE<br><small>np. PNG z przezroczystym tłem</small></div>
+      </div>
+
+      <div class="spec-list">
+        <div><span class="spec-icon">〰</span><p><b>Częstotliwość drgań</b><small>38 000 – 40 000 ruchów/min</small></p></div>
+        <div><span class="spec-icon">▯</span><p><b>Bateria</b><small>2000 mAh (litowa)</small></p></div>
+        <div><span class="spec-icon">◫</span><p><b>Czas pracy</b><small>Do 30 dni na jednym ładowaniu</small></p></div>
+        <div><span class="spec-icon">↯</span><p><b>Ładowanie</b><small>USB‑C</small></p></div>
+        <div><span class="spec-icon">◷</span><p><b>Czas ładowania</b><small>Około 6 godzin</small></p></div>
+        <div><span class="spec-icon">◉</span><p><b>Wodoodporność</b><small>IPX7</small></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRYBY -->
+  <section class="section modes-section">
+    <div class="container">
+      <div class="section-head centered">
+        <span class="eyebrow">5 TRYBÓW CZYSZCZENIA</span>
+        <h2>Dopasuj do swoich potrzeb</h2>
+      </div>
+
+      <div class="mode-grid reveal-stagger">
+        <article class="mode-card"><span class="mode-icon"><img src="img/ikon1.png" alt=""></span><h3>Sweep</h3><p>Delikatne czyszczenie wrażliwych zębów i dziąseł</p></article>
+        <article class="mode-card"><span class="mode-icon"><img src="img/ikon2.png" alt=""></span><h3>Soft</h3><p>Masaż dziąseł i poprawa ich kondycji</p></article>
+        <article class="mode-card"><span class="mode-icon"><img src="img/ikon3.png" alt=""></span><h3>Sweep+</h3><p>Codzienne skuteczne usuwanie płytki nazębnej</p></article>
+        <article class="mode-card"><span class="mode-icon"><img src="img/ikon4.png" alt=""></span><h3>White</h3><p>Rozjaśnianie zębów i usuwanie przebarwień</p></article>
+        <article class="mode-card"><span class="mode-icon"><img src="img/ikon5.png" alt=""></span><h3>Polish</h3><p>Polerowanie zębów dla gładkich efektów</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZAWARTOŚĆ ZESTAWU -->
+  <section class="section" id="zestaw">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">ZAWARTOŚĆ ZESTAWU</span>
+        <h2>Wszystko, czego potrzebujesz</h2>
+      </div>
+
+      <div class="kit-grid reveal-stagger">
+        <article class="kit-card">
+          <div class="kit-img media-frame"><img src="img/product.png" alt="" onerror="this.classList.add('is-missing')"><div class="placeholder">IMG</div></div>
+          <p>1× szczoteczka soniczna Soniqa</p>
+        </article>
+        <article class="kit-card">
+          <div class="kit-img media-frame"><img src="img/charger.png" alt="" onerror="this.classList.add('is-missing')"><div class="placeholder">IMG</div></div>
+          <p>1× kabel ładujący USB‑C</p>
+        </article>
+        <article class="kit-card">
+          <div class="kit-img media-frame"><img src="img/stojak.png" alt="" onerror="this.classList.add('is-missing')"><div class="placeholder">IMG</div></div>
+          <p>1× stojak na szczoteczkę</p>
+        </article>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- OPINIE -->
+  <section class="section reviews-section" id="opinie">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">OPINIE KLIENTÓW</span>
+        <h2>Zaufało nam już tysiące osób</h2>
+      </div>
+
+      <div class="reviews-layout reveal">
+        <div class="rating-box">
+          <div class="score">4,9<span>/5</span></div>
+          <div class="stars">★★★★★</div>
+          <small>Na podstawie 350+ opinii</small>
+        </div>
+
+        <div class="reviews-track" id="reviewsTrack">
+          <article class="review-card"><div class="stars">★★★★★</div><p>Bardzo cicha i skuteczna. Zęby są gładkie jak po higienizacji!</p><b>Katarzyna, Wrocław</b></article>
+          <article class="review-card"><div class="stars">★★★★★</div><p>Świetna bateria, ładuję raz na miesiąc. Polecam każdemu!</p><b>Paweł, Kraków</b></article>
+          <article class="review-card"><div class="stars">★★★★★</div><p>Delikatna dla dziąseł, a jednak świetnie czyści.</p><b>Anna, Gdańsk</b></article>
+        </div>
+      </div>
+
+      <div class="dots" aria-hidden="true"><span class="active"></span><span></span><span></span><span></span></div>
+    </div>
+  </section>
+
+  <!-- FAQ CTA -->
+  <section class="section faq-strip" id="faq">
+    <div class="container faq-box reveal">
+      <div>
+        <span class="eyebrow">MASZ PYTANIA?</span>
+        <p>Sprawdź najczęściej zadawane pytania<br>lub skontaktuj się z nami.</p>
+      </div>
+      <a class="btn btn-small" href="#">Zobacz FAQ →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" id="kontakt">
+  <div class="container footer-grid">
+    <div>
+      <a class="logo" href="#top">soniqa.</a>
+      <p>Technologia, która dba<br>o Twój uśmiech każdego dnia.</p>
+      <div class="socials">◎ ♪ f</div>
+    </div>
+
+    <div><h4>Sklep</h4><a href="#">Szczoteczka</a><a href="#">Końcówki</a><a href="#">Zestawy</a></div>
+    <div><h4>Informacje</h4><a href="#">O nas</a><a href="#">Dostawa i płatności</a><a href="#">Zwroty i reklamacje</a></div>
+    <div><h4>Pomoc</h4><a href="#">FAQ</a><a href="#">Kontakt</a></div>
+
+    <div class="footer-benefits">
+      <p>🚚 Darmowa dostawa od 150 zł</p>
+      <p>◷ 30 dni na zwrot bez podania przyczyny</p>
+      <p>♢ Bezpieczne płatności BLIK / Karta / Przelewy</p>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>© 2026 Soniqa. Wszelkie prawa zastrzeżone.</span>
+    <div><a href="#">Regulamin</a><a href="#">Polityka prywatności</a></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
