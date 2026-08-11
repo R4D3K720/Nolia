@@ -29,7 +29,7 @@
   🛍
   <span class="cart-badge" id="cartBadge">1</span>
 </button>
-      <a class="btn btn-small" href="#kup">Kup teraz</a>
+<a class="btn btn-small buy-now" href="#">Kup teraz</a>
       <button class="menu-btn" id="menuBtn" aria-label="Otwórz menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -54,7 +54,9 @@
         <h1>Lepsze mycie.<br>Lepszy uśmiech.</h1>
         <p>Dokładniejsze czyszczenie i świeżość, którą poczujesz już po pierwszym użyciu.</p>
         <div class="hero-cta">
-          <a class="btn" href="#kup">Kup teraz – 179,99 zł</a>
+          <a class="btn buy-now" href="#">
+  Kup teraz – 179,99 zł
+</a>
           <a class="text-link" href="#produkt">Dowiedz się więcej <span>→</span></a>
         </div>
       </div>
@@ -343,7 +345,6 @@
         <span>✓</span>
         <p>
           <b>Bezpieczna płatność</b>
-          <small>BLIK, karta i szybkie płatności</small>
         </p>
       </div>
 
@@ -374,6 +375,593 @@
   </div>
 
 </aside>
+<!-- =====================================================
+     NOLIA CHECKOUT
+===================================================== -->
+
+<div class="checkout" id="checkout" aria-hidden="true">
+
+  <header class="checkout-header">
+
+    <button class="checkout-back" id="checkoutBack" type="button">
+      ←
+    </button>
+
+    <a class="checkout-logo" href="#">Nolia.</a>
+
+    <button class="checkout-exit" id="checkoutExit" type="button">
+      ×
+    </button>
+
+  </header>
+
+
+  <!-- PROGRESS -->
+
+  <div class="checkout-progress">
+
+    <div class="progress-item active" data-progress="1">
+      <span>1</span>
+      <small>Dane</small>
+    </div>
+
+    <div class="progress-line"></div>
+
+    <div class="progress-item" data-progress="2">
+      <span>2</span>
+      <small>Dostawa</small>
+    </div>
+
+    <div class="progress-line"></div>
+
+    <div class="progress-item" data-progress="3">
+      <span>3</span>
+      <small>Płatność</small>
+    </div>
+
+  </div>
+
+
+  <main class="checkout-main">
+
+    <!-- =========================
+         KROK 1 — DANE
+    ========================== -->
+
+    <section class="checkout-step active" data-step="1">
+
+      <div class="checkout-step-head">
+
+        <span class="checkout-eyebrow">
+          KROK 1 Z 3
+        </span>
+
+        <h1>Gdzie wysłać Twoją Nolia?</h1>
+
+        <p>
+          Potrzebujemy tylko kilku informacji do realizacji zamówienia.
+        </p>
+
+      </div>
+
+
+      <div class="checkout-form">
+
+        <div class="form-row">
+
+          <div class="field">
+            <label for="firstName">Imię</label>
+            <input
+              id="firstName"
+              type="text"
+              placeholder="Anna"
+              autocomplete="given-name"
+            >
+          </div>
+
+          <div class="field">
+            <label for="lastName">Nazwisko</label>
+            <input
+              id="lastName"
+              type="text"
+              placeholder="Kowalska"
+              autocomplete="family-name"
+            >
+          </div>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="email">E-mail</label>
+
+          <input
+            id="email"
+            type="email"
+            placeholder="anna@email.pl"
+            autocomplete="email"
+          >
+
+          <small>
+            Wyślemy tutaj potwierdzenie zamówienia.
+          </small>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="phone">Telefon</label>
+
+          <input
+            id="phone"
+            type="tel"
+            placeholder="+48 500 000 000"
+            autocomplete="tel"
+          >
+
+        </div>
+
+
+        <button
+          class="checkout-next"
+          data-next="2"
+          type="button"
+        >
+          Przejdź do dostawy
+          <span>→</span>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         KROK 2 — DOSTAWA
+    ========================== -->
+
+    <section class="checkout-step" data-step="2">
+
+      <div class="checkout-step-head">
+
+        <span class="checkout-eyebrow">
+          KROK 2 Z 3
+        </span>
+
+        <h1>Jak mamy dostarczyć paczkę?</h1>
+
+        <p>
+          Wybierz najwygodniejszą dla Ciebie opcję.
+        </p>
+
+      </div>
+
+
+      <div class="delivery-options">
+
+        <!-- PACZKOMAT -->
+
+        <button
+          class="delivery-card selected"
+          type="button"
+          data-delivery="paczkomat"
+          data-price="12.99"
+        >
+
+          <div class="delivery-icon">
+            ▦
+          </div>
+
+          <div class="delivery-info">
+            <strong>Paczkomat</strong>
+            <small>1–2 dni robocze</small>
+          </div>
+
+          <strong class="delivery-price">
+            12,99 zł
+          </strong>
+
+          <span class="delivery-radio"></span>
+
+        </button>
+
+
+        <!-- KURIER -->
+
+        <button
+          class="delivery-card"
+          type="button"
+          data-delivery="kurier"
+          data-price="14.99"
+        >
+
+          <div class="delivery-icon">
+            🚚
+          </div>
+
+          <div class="delivery-info">
+            <strong>Kurier</strong>
+            <small>1–2 dni robocze</small>
+          </div>
+
+          <strong class="delivery-price">
+            14,99 zł
+          </strong>
+
+          <span class="delivery-radio"></span>
+
+        </button>
+
+      </div>
+
+
+      <!-- PACZKOMAT -->
+
+      <div class="delivery-details" id="lockerFields">
+
+        <div class="field">
+
+          <label>
+            Paczkomat
+          </label>
+
+          <input
+            id="locker"
+            type="text"
+            placeholder="np. POZ01A"
+          >
+
+          <small>
+            Później podepniemy tutaj prawdziwą mapę Paczkomatów.
+          </small>
+
+        </div>
+
+      </div>
+
+
+      <!-- ADRES KURIERA -->
+
+      <div
+        class="delivery-details hidden"
+        id="courierFields"
+      >
+
+        <div class="field">
+
+          <label for="street">
+            Ulica i numer
+          </label>
+
+          <input
+            id="street"
+            type="text"
+            placeholder="Poznańska 12/4"
+            autocomplete="street-address"
+          >
+
+        </div>
+
+
+        <div class="form-row">
+
+          <div class="field">
+
+            <label for="postal">
+              Kod pocztowy
+            </label>
+
+            <input
+              id="postal"
+              type="text"
+              placeholder="60-001"
+              autocomplete="postal-code"
+            >
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="city">
+              Miasto
+            </label>
+
+            <input
+              id="city"
+              type="text"
+              placeholder="Poznań"
+              autocomplete="address-level2"
+            >
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <button
+        class="checkout-next"
+        data-next="3"
+        type="button"
+      >
+        Przejdź do płatności
+        <span>→</span>
+      </button>
+
+    </section>
+
+
+    <!-- =========================
+         KROK 3 — PŁATNOŚĆ
+    ========================== -->
+
+<section class="checkout-step" data-step="3">
+
+  <div class="checkout-step-head">
+    <span class="checkout-eyebrow">OSTATNI KROK</span>
+
+    <h1>Podsumowanie zamówienia.</h1>
+
+    <p>
+      Po złożeniu zamówienia otrzymasz dane do przelewu.
+      Paczkę wyślemy po zaksięgowaniu płatności.
+    </p>
+  </div>
+
+
+  <div class="bank-payment-card">
+
+    <div class="bank-payment-icon">↗</div>
+
+    <div>
+      <strong>Przelew bankowy</strong>
+      <small>
+        Zapłać ze swojej aplikacji bankowej lub bankowości internetowej.
+      </small>
+    </div>
+
+    <span class="bank-check">✓</span>
+
+  </div>
+
+
+  <div class="checkout-summary">
+
+    <div>
+      <span>
+        Nolia ×
+        <span id="checkoutQuantity">1</span>
+      </span>
+
+      <strong id="checkoutProducts">
+        179,99 zł
+      </strong>
+    </div>
+
+
+    <div>
+      <span>Dostawa</span>
+
+      <strong id="checkoutDelivery">
+        12,99 zł
+      </strong>
+    </div>
+
+
+    <div class="checkout-summary-total">
+
+      <span>Do zapłaty</span>
+
+      <strong id="checkoutGrandTotal">
+        192,98 zł
+      </strong>
+
+    </div>
+
+  </div>
+
+
+  <label class="checkout-agreement">
+
+    <input
+      type="checkbox"
+      id="termsCheckbox"
+    >
+
+    <span>
+      Akceptuję
+      <a href="#" target="_blank">
+        regulamin sklepu
+      </a>
+      i politykę prywatności.
+    </span>
+
+  </label>
+
+
+  <button
+    class="checkout-pay"
+    id="placeOrderBtn"
+    type="button"
+  >
+
+    <span>Zamawiam</span>
+
+    <strong id="payButtonPrice">
+      192,98 zł
+    </strong>
+
+  </button>
+
+
+  <div class="checkout-security">
+    🔒 Twoje dane są przesyłane bezpiecznie
+  </div>
+
+</section>
+
+
+    <!-- =========================
+         SUKCES
+    ========================== -->
+
+    <section
+  class="checkout-step checkout-success"
+  data-step="4"
+>
+
+  <div class="success-check">
+    ✓
+  </div>
+
+  <span class="checkout-eyebrow">
+    ZAMÓWIENIE PRZYJĘTE
+  </span>
+
+  <h1>Jeszcze tylko płatność 🩷</h1>
+
+  <p>
+    Twoja Nolia jest już zarezerwowana.
+    Wykonaj przelew poniżej.
+  </p>
+
+
+  <div class="success-order">
+
+    <small>NUMER ZAMÓWIENIA</small>
+
+    <strong id="orderNumber">
+      NOL-0000
+    </strong>
+
+  </div>
+
+
+  <div class="bank-transfer-box">
+
+    <div class="bank-transfer-title">
+      Dane do przelewu
+    </div>
+
+
+    <div class="transfer-row">
+
+      <span>Odbiorca</span>
+
+      <strong>Nolia</strong>
+
+    </div>
+
+
+    <div class="transfer-row">
+
+      <span>Numer rachunku</span>
+
+      <div class="copy-value">
+
+        <strong id="bankAccount">
+          00 0000 0000 0000 0000 0000 0000
+        </strong>
+
+        <button
+          type="button"
+          class="copy-btn"
+          data-copy="bankAccount"
+        >
+          Kopiuj
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div class="transfer-row">
+
+      <span>Kwota</span>
+
+      <div class="copy-value">
+
+        <strong id="transferAmount">
+          192,98 zł
+        </strong>
+
+        <button
+          type="button"
+          class="copy-btn"
+          data-copy="transferAmount"
+        >
+          Kopiuj
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div class="transfer-row">
+
+      <span>Tytuł przelewu</span>
+
+      <div class="copy-value">
+
+        <strong id="transferTitle">
+          NOL-0000
+        </strong>
+
+        <button
+          type="button"
+          class="copy-btn"
+          data-copy="transferTitle"
+        >
+          Kopiuj
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="transfer-notice">
+
+    <span>◷</span>
+
+    <p>
+      Zamówienie wyślemy po zaksięgowaniu płatności.
+      Pamiętaj, aby podać dokładny tytuł przelewu.
+    </p>
+
+  </div>
+
+
+  <p class="success-email">
+
+    Dane do płatności wyślemy również na
+
+    <strong id="successEmail"></strong>
+
+  </p>
+
+
+  <button
+    class="checkout-finish"
+    id="finishCheckout"
+    type="button"
+  >
+    Wróć do sklepu
+  </button>
+
+</section>
+
+  </main>
+
+</div>
 <script src="script.js"></script>
 </body>
 </html>
